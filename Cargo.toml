@@ -1,0 +1,27 @@
+[package]
+name = "verix-rs"
+version = "1.1.1"
+edition = "2021"
+authors =  ["Verix <2967630235@qq.com>"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[profile.release]
+opt-level = 3
+debug = false
+lto = "thin"
+strip="symbols"
+
+[dependencies]
+bincode="1.3.3"
+rand = "0.8.5"
+axum = "0.6.19"
+base64 = "0.21.2"
+serde_json = "1.0.104"
+bytebuffer = "2.1.1"
+reqwest = "0.11.18"
+tracing = "0.1.37"
+tracing-subscriber = "0.3.17"
+tokio = { version = "1.32.0", features = ["full"] }
+serde = { version = "1.0.188", features = ["derive"] }
+openssl = { version = "0.10.57", features = ["vendored"] }
+lazy_static = "1.4.0"
